@@ -1,5 +1,7 @@
 from email import message
 from django.shortcuts import redirect, render
+
+from kimsta.forms import CreateUserForm
 from .models import posts #import photos model
 
 def insta(request):
