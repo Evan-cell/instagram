@@ -6,11 +6,23 @@
         <input type="text" name="search" placeholder="...search">
     </div>
     <div class="header-right">
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+            <a class="nav-link active text-dark" aria-current="page" href="/profile/">Profile</a>
+          </li>
+          <li>
+            <a class='btn btn-default' href="/profile" >Add Post</a>
+        </li>
         <i id="icon" class="bi bi-house-door-fill"></i>
         <i id="icon" class="bi bi-send"></i>
         <i id="icon" class="bi bi-plus-square"></i>
         <i id="icon" class="bi bi-camera-reels"></i>
         <i id="icon" class="bi bi-heart"></i>
         <i id="icon" class="bi bi-person-circle"></i>
+        {% else %}
+        <li>
+            <a class='btn btn-default' href="/login">Login</a>
+        </li>
+        {% endif %}
     </div>
 </div>
