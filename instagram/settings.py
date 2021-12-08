@@ -18,7 +18,7 @@ import cloudinary.api
 
 cloudinary.config( 
   cloud_name = "moringa-chit-fund-private-limited", 
-  api_key = "YOUR_API_KEY", 
+  api_key = "177778488814987", 
   api_secret = "YOUR_API_SECRET" 
 )
 
