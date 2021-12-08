@@ -19,7 +19,7 @@ import cloudinary.api
 cloudinary.config( 
   cloud_name = "moringa-chit-fund-private-limited", 
   api_key = "177778488814987", 
-  api_secret = "YOUR_API_SECRET" 
+  api_secret = "_7SSmn6ASgdrXTjtRRIyT8gagEY" 
 )
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
