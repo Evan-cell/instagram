@@ -4,7 +4,5 @@ from .import views
 
 #urls
 urlpatterns = [
-    
     path('', views.insta, name='insta'),
-    
 ]
