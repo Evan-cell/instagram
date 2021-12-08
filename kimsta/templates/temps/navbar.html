@@ -7,12 +7,12 @@
     </div>
     <div class="header-right">
         {% if user.is_authenticated %}
-        <li class="nav-item">
-            <a class="nav-link active text-dark" aria-current="page" href="/profile/">Profile</a>
-          </li>
-          <li>
-            <a class='btn btn-default' href="/profile" >Add Post</a>
-        </li>
+       
+            <button class="btn"><a id="icon" aria-current="page" href="/profile/">Profile</a></button>
+          
+          
+           <button class="btn"><a id="icon" href="/profile" >Add Post</a></button> 
+        
         <i id="icon" class="bi bi-house-door-fill"></i>
         <i id="icon" class="bi bi-send"></i>
         <i id="icon" class="bi bi-plus-square"></i>

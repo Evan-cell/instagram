@@ -3,7 +3,7 @@ from django.shortcuts import redirect, render
 from django.contrib.auth import authenticate, login
 from .models import posts,Likes,Comment,Profile
 from django.contrib.auth.decorators import login_required
-from .forms import ImageForm,CommentForm
+from .forms import ImageForm,UserCreationForm,CommentForm
 from django.shortcuts import render,redirect, get_object_or_404
 
 from kimsta.forms import CreateUserForm
@@ -11,7 +11,13 @@ from .models import posts #import photos model
 
 def insta(request):
     # imports photos and save it in database
-    photo = posts.objects.all()
+    if request.method == 'POST':  
+        form = CommentForm(request.POST, request.FILES)
+        if form.is_valid():
+            com = form.save(commit=False)
+            com.user = request.user
+            com.save()
+    photo = posts.objects.all().order_by('-id')
     # adding context 
     ctx = {'photo':photo}
     return render(request, 'temps/insta.html', ctx)

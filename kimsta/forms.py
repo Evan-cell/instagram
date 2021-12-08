@@ -1,8 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from django.db.models import fields
-from .models import posts,Profile,Comment
+from .models import posts,Comment
 
 class ImageForm(forms.ModelForm):
     image = forms.ImageField(widget=forms.FileInput(attrs={
@@ -13,7 +12,7 @@ class ImageForm(forms.ModelForm):
 
     class Meta:
         model = posts
-        fields = ['image','title','caption']
+        fields = ['image','title']
 
 class CommentForm(forms.ModelForm):
     class Meta:
