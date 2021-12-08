@@ -4,8 +4,8 @@ from .import views
 
 #urls
 urlpatterns = [
-    path('login/',views.loginPage, name="login"),
-    path('',views.registerPage, name="register"),
+    path('',views.loginPage, name="login"),
+    path('register/',views.registerPage, name="register"),
     path('insta/', views.insta, name='insta'),
     path('profile/', views.profile, name='profile'),
     path('search/', views.search_post, name='search.post'), 

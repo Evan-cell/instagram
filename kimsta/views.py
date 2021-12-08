@@ -66,7 +66,7 @@ def profile(request):
             form.instance.user = request.user
             form.save()
         redirect('profile')
-    return render(request, 'profile.html', {"image": image, "profile": profile , "form": form})
+    return render(request, 'temps/profile.html', {"image": image, "profile": profile , "form": form})
     
 @login_required(login_url='/accounts/login/')
 def search_post(request):
