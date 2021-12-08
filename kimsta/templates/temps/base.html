@@ -1,4 +1,4 @@
-<!-- {% load bootstrap5 %} -->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,8 +14,9 @@
     <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/60639510?v=4">
 </head>
 <body>
+    {% include "temps/navbar.html" %}
     {%block content%}
-    {% extends 'temps/navbar.html'%}
+    
     {%endblock%}
    
 </body>
