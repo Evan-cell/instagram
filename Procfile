@@ -1,3 +1,3 @@
-web: gunicorn instagram.wsgi --log-file -
+web: gunicorn INSTAGRAM.wsgi:application --log-file - --log-level debug
 heroku ps:scale web=1
 python manage.py migrate
