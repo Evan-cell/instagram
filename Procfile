@@ -1,0 +1,1 @@
+web: gunicorn kimsta.wsgi --log-file -
